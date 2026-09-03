@@ -9,6 +9,7 @@ index.html              Landing page (template gallery, process, pricing, contac
 assets/site.css         Landing page styles
 templates/
   spotlight/            Template 01 — personal brand / performer one-pager
+  encore/               Template 02 — singer / band one-pager
     index.html
     style.css
 reference/              Screenshots used as design inspiration (not published content)
