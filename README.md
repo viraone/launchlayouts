@@ -10,6 +10,7 @@ assets/site.css         Landing page styles
 templates/
   spotlight/            Template 01 — personal brand / performer one-pager
   encore/               Template 02 — singer / band one-pager
+  clarity/              Template 03 — coach / consultant one-pager
     index.html
     style.css
 reference/              Screenshots used as design inspiration (not published content)
