@@ -37,6 +37,6 @@ reference/              Screenshots used as design inspiration (not published co
 
 ## Before you publish
 
-- Replace `hello@example.com` in `index.html` with your real email.
+- Replace `vxayananh@gmail.com` in `index.html` with your real email.
 - Update pricing to what you actually charge.
 - Optionally delete `reference/` — those screenshots are of a real person's site and shouldn't be published.
