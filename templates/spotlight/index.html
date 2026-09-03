@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotlight — Template by LaunchLayouts</title>
+  <meta name="description" content="A warm, editorial one-page template for comedians, performers, speakers, and creators." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <a class="template-badge" href="../../index.html">← Back to LaunchLayouts</a>
+
+  <!-- Social bar -->
+  <header class="social-bar">
+    <a href="#" aria-label="Instagram" class="social">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="#" aria-label="Facebook" class="social">
+      <svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg>
+    </a>
+    <a href="#" aria-label="TikTok" class="social">
+      <svg viewBox="0 0 24 24"><path d="M15 3v10.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M15 3a5 5 0 0 0 5 5"/></svg>
+    </a>
+    <a href="#" aria-label="Email" class="social">
+      <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+    </a>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Be part of my dream come true</h1>
+    <div class="hero-copy">
+      <p>Hi, I'm <strong>Your Name</strong>!</p>
+      <p>I've wanted to do this since I was a kid. Now I'm doing it every single week, in clubs, theaters, and festivals across the country. When you come see me, you're part of the dream.</p>
+      <p>I've performed everywhere — comedy clubs, festivals, competitions, corporate events, colleges, and community centers. Every live show is about bringing people together and sharing the moments that make us laugh.</p>
+    </div>
+  </section>
+
+  <!-- Video clips -->
+  <section class="clips">
+    <a href="#" class="clip" aria-label="Play clip 1">
+      <div class="clip-media ph ph-stage"><span class="ph-label">Video clip</span></div>
+      <span class="play"></span>
+      <span class="caption">weird year for me as a parent</span>
+    </a>
+    <a href="#" class="clip" aria-label="Play clip 2">
+      <div class="clip-media ph ph-stage-2"><span class="ph-label">Video clip</span></div>
+      <span class="play"></span>
+      <span class="caption">I'm mom to two teenagers</span>
+    </a>
+    <a href="#" class="clip" aria-label="Play clip 3">
+      <div class="clip-media ph ph-outdoor"><span class="ph-label">Video clip</span></div>
+      <span class="play"></span>
+      <span class="caption">come visit, we're not tired of you yet</span>
+    </a>
+  </section>
+
+  <!-- Split: photo left, awards right -->
+  <section class="split">
+    <div class="split-media ph ph-portrait"><span class="ph-label">Portrait photo</span></div>
+    <div class="split-text">
+      <span class="kicker">For everyone who believed in me</span>
+      <h2>Awards &amp; Recognition</h2>
+      <ul class="awards">
+        <li><strong>Best of Festival</strong> — Regional Comedy Festival, 2025</li>
+        <li><strong>Winner</strong> — City Comic Con Stand-Up Competition</li>
+        <li><strong>Semi-finalist</strong> — International Comedy Competition</li>
+        <li><strong>"Undisputed Champion of Comedy"</strong> — Local Weekly</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Split: text left, photo right -->
+  <section class="split reverse">
+    <div class="split-media ph ph-chair"><span class="ph-label">Lifestyle photo</span></div>
+    <div class="split-text">
+      <span class="kicker">Join me on this trip</span>
+      <h2>Comedy is Wild</h2>
+      <p>I never thought I would actually do the one thing I always told people I wanted to do growing up.</p>
+      <p>But I've been doing it, and I am always excited to share it with anyone who needs a laugh — and that's all of us.</p>
+      <a href="#" class="btn-soft">Download Press Kit (PDF)
+        <svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- About + signup -->
+  <section class="about">
+    <h2>Meet Your Name</h2>
+    <p>Your Name is a performer who is honest, warm, and a little absurd. They've won <a href="#">Regional Comedy Festival</a>, represented their hometown at the <a href="#">International Comedy Competition</a>, and were named one of the <a href="#">Champions of Comedy</a> by the local paper.</p>
+    <p>Their dog is the love of their life and occasionally comes along to shows to spread joy and dog hair.</p>
+
+    <form class="signup" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Thanks! ✓';">
+      <h3>Join the secret club</h3>
+      <p>Get early ticket access when I come to your city!</p>
+      <input type="text" placeholder="First Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="text" placeholder="Zip Code" />
+      <button type="submit">Join</button>
+    </form>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery">
+    <div class="ph ph-1 tall"><span class="ph-label">Photo</span></div>
+    <div class="ph ph-2"><span class="ph-label">Photo</span></div>
+    <div class="ph ph-3"><span class="ph-label">Photo</span></div>
+    <div class="ph ph-4 wide"><span class="ph-label">Photo</span></div>
+    <div class="ph ph-5"><span class="ph-label">Photo</span></div>
+    <div class="ph ph-6 tall"><span class="ph-label">Photo</span></div>
+    <div class="ph ph-7"><span class="ph-label">Photo</span></div>
+    <div class="ph ph-8 wide"><span class="ph-label">Photo</span></div>
+    <div class="ph ph-9"><span class="ph-label">Photo</span></div>
+    <div class="ph ph-10"><span class="ph-label">Photo</span></div>
+  </section>
+
+  <!-- Press logos -->
+  <section class="press">
+    <span class="kicker center">As seen at</span>
+    <div class="logos">
+      <span>COMEDY FEST</span>
+      <span>Comic Con</span>
+      <span>Laughs Club</span>
+      <span>The Weekly</span>
+      <span>Don't Tell</span>
+      <span>Cozy Comedy</span>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-bar footer-social">
+      <a href="#" aria-label="Instagram" class="social"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+      <a href="#" aria-label="Facebook" class="social"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></a>
+      <a href="#" aria-label="TikTok" class="social"><svg viewBox="0 0 24 24"><path d="M15 3v10.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M15 3a5 5 0 0 0 5 5"/></svg></a>
+      <a href="#" aria-label="Email" class="social"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+    </div>
+    <p>© Your Name. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
