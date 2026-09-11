@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Brief — LaunchLayouts</title>
+  <link rel="stylesheet" href="assets/site.css">
+  <style>
+    body {
+      background-color: #0b0f19;
+      color: #e5e7eb;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 40px 16px;
+    }
+    .intake-wrapper {
+      max-width: 640px;
+      margin: 0 auto;
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 12px;
+      padding: 32px;
+    }
+    .badge {
+      display: inline-block;
+      background: #065f46;
+      color: #34d399;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      margin-bottom: 12px;
+    }
+    h1 { margin: 0 0 8px; font-size: 1.75rem; color: #f9fafb; }
+    p.lead { color: #9ca3af; font-size: 0.95rem; margin-bottom: 28px; line-height: 1.5; }
+    .field { margin-bottom: 20px; }
+    label { display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 6px; color: #d1d5db; }
+    .hint { font-size: 0.75rem; color: #9ca3af; margin-top: 4px; }
+    input[type="text"], input[type="email"], input[type="url"], input[type="tel"], textarea, select {
+      width: 100%;
+      box-sizing: border-box;
+      background: #1f2937;
+      border: 1px solid #374151;
+      border-radius: 6px;
+      padding: 10px 12px;
+      color: #ffffff;
+      font-size: 0.95rem;
+    }
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: #3b82f6;
+    }
+    textarea { resize: vertical; min-height: 90px; }
+    .btn-submit {
+      width: 100%;
+      background: #2563eb;
+      color: #ffffff;
+      border: none;
+      padding: 14px;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 12px;
+      transition: background 0.2s;
+    }
+    .btn-submit:hover { background: #1d4ed8; }
+  </style>
+</head>
+<body>
+
+<main class="intake-wrapper">
+  <span class="badge">Payment Confirmed ✓</span>
+  <h1>Let's build your site</h1>
+  <p class="lead">Fill in the details below. Once submitted, your first draft will be ready within 48 hours.</p>
+
+  <!-- We will link your Formspree or Tally endpoint here -->
+  <form id="brief-form" action="https://formspree.io/f/YOUR_ENDPOINT_HERE" method="POST">
+    
+    <!-- Stripe Session & Tier info passed automatically -->
+    <input type="hidden" name="stripe_session_id" id="stripe_session_id">
+    <input type="hidden" name="tier" id="tier">
+    
+    <div class="field">
+      <label for="template">Selected Template</label>
+      <select name="template" id="template" required>
+        <option value="spotlight">Spotlight (Personal Brand / Performer)</option>
+        <option value="encore">Encore (Singer / Band)</option>
+        <option value="clarity">Clarity (Coach / Consultant)</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="business_name">Business or Stage Name *</label>
+      <input type="text" id="business_name" name="business_name" placeholder="e.g. Marcus Vance Music" required>
+    </div>
+
+    <div class="field">
+      <label for="tagline">Headline / Tagline *</label>
+      <input type="text" id="tagline" name="tagline" placeholder="e.g. Session cellist and producer based in Nashville" required>
+    </div>
+
+    <div class="field">
+      <label for="about_text">About / Bio *</label>
+      <textarea id="about_text" name="about_text" placeholder="2-3 paragraphs describing who you are, what you do, and notable credits." required></textarea>
+    </div>
+
+    <div class="field">
+      <label for="offerings">Services or Offerings *</label>
+      <textarea id="offerings" name="offerings" placeholder="List your 2-4 primary offerings or packages with brief descriptions." required></textarea>
+    </div>
+
+    <div class="field">
+      <label for="photos_link">Photos & Media Link (Google Drive / Dropbox) *</label>
+      <input type="url" id="photos_link" name="photos_link" placeholder="https://drive.google.com/drive/folders/..." required>
+      <div class="hint">Make sure link sharing is set to "Anyone with the link can view".</div>
+    </div>
+
+    <div class="field">
+      <label for="brand_colors">Brand Colors & Style</label>
+      <input type="text" id="brand_colors" name="brand_colors" placeholder="e.g. Dark navy with gold accents">
+    </div>
+
+    <div class="field">
+      <label for="social_links">Social Media & Booking Links</label>
+      <input type="text" id="social_links" name="social_links" placeholder="Instagram, YouTube, Calendly link">
+    </div>
+
+    <div class="field">
+      <label for="client_contact">Your Email & Phone Number *</label>
+      <input type="text" id="client_contact" name="client_contact" placeholder="you@domain.com | (555) 000-0000" required>
+    </div>
+
+    <div class="field">
+      <label for="domain_preference">Custom Domain Preference</label>
+      <input type="text" id="domain_preference" name="domain_preference" placeholder="e.g. marcusvancemusic.com">
+    </div>
+
+    <button type="submit" class="btn-submit">Submit Website Brief →</button>
+  </form>
+</main>
+
+<script>
+  // Read params passed from Stripe checkout redirect
+  const params = new URLSearchParams(window.location.search);
+  const templateParam = params.get('template');
+  const sessionParam = params.get('session_id');
+  const tierParam = params.get('tier');
+
+  if (templateParam) {
+    const templateSelect = document.getElementById('template');
+    if (templateSelect) templateSelect.value = templateParam.toLowerCase();
+  }
+  if (sessionParam) {
+    document.getElementById('stripe_session_id').value = sessionParam;
+  }
+  if (tierParam) {
+    document.getElementById('tier').value = tierParam;
+  }
+</script>
+
+</body>
+</html>
